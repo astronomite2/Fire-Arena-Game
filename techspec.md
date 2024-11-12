@@ -5,14 +5,12 @@ Using PixiJs (https://pixijs.com/8.x/guides) is a good choice for making the gam
 ### Player
 - `PlayerController` class
   - Represents the player circle
-  - Handles player movement based on WASD input
-  - Calculates player speed and acceleration based on inertia
-  - Manages player energy/health
-  - Detects collisions with enemies and the lava border
-- `PlayerPhysics` class
-  - Calculates player movement and momentum
-  - Applies friction to slow down player when no keys are pressed
-  - `handleCollisionAnimation()` handles the animation when players collide
+  - `handlesMovement()` handles player movement based on WASD input
+  - `handlePhysics` calculates player speed and acceleration based on inertia; applies friction to slow down player when no keys are pressed; calculates player movement and momentum
+  - `updateEnergy()` manages player energy/health
+  - `checkDeath()` detects collisions with enemies and the lava border
+  - `handleCollision()` Handles energy depletion when colliding with enemies
+  - `handleCollisionAnimation()` handles the animation when players collide  
 
 ### Arena
 - `ArenaView` class
@@ -27,15 +25,18 @@ Using PixiJs (https://pixijs.com/8.x/guides) is a good choice for making the gam
   - Detects collisions between enemies and the player
 - `Enemy` class
   - Represents an individual enemy circle
-  - Handles enemy appearance and fiery particle effects
-  - Manages enemy movement and collision logic
+  - `speed` double for the speed of enemy's movement
+  - `health` double for health of enemy
+  - `handleEnemyParticle()` handles enemy appearance and fiery particle effects
+  - `die()` manages collision logic on player hit
+  - `updateEnemyMovement()` handle enemy movement 
 
-### Energy System
-- `EnergyManager` class
-  - Tracks the player's current energy level
-  - Calculates energy gain based on player speed and movement
-  - Handles energy depletion when colliding with enemies
-  - Triggers 'overcharge' state when energy reaches maximum
+### Player & Energy Stats
+- `PlayerStats` class
+  - `energy` tracks the player's current energy level and energy gain based on player speed and movement; triggers 'overcharge' state when energy reaches maximum
+  - `speed` double for the speed of player's movement
+  - `health` double for health of player
+  - `set()` methods for respective variables
 - `EnergyVisual` class
   - `renderEnergy()` updates the energy bar display based on the `EnergyManager`
 
