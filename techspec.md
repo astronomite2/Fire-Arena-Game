@@ -7,12 +7,12 @@ Using PixiJs (https://pixijs.com/8.x/guides) is a good choice for making the gam
   - Represents the player circle
   - `handlesMovement()` handles player movement based on WASD input
   - `handlePhysics` calculates player speed and acceleration based on inertia; applies friction to slow down player when no keys are pressed; calculates player movement and momentum (this may me doable by default using PixiJs) 
-  - `updateEnergy()` manages player energy/health
+  - `updateEnergy()` manages player energy/health; triggers 'overcharge' state when energy reaches maximum
   - `checkDeath()` detects collisions with enemies and the lava border
   - `handleCollision()` Handles energy depletion when colliding with enemies
   - `handleCollisionAnimation()` handles the animation when players collide
 - `PlayerStats` class
-  - `energy` tracks the player's current energy level and energy gain based on player speed and movement; triggers 'overcharge' state when energy reaches maximum
+  - `energy` tracks the player's current energy level and energy gain based on player speed and movement
   - `speed` double for the speed of player's movement
   - `health` double for health of player
   - `set()` methods for respective variables
