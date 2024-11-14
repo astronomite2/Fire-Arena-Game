@@ -10,7 +10,13 @@ Using PixiJs (https://pixijs.com/8.x/guides) is a good choice for making the gam
   - `updateEnergy()` manages player energy/health
   - `checkDeath()` detects collisions with enemies and the lava border
   - `handleCollision()` Handles energy depletion when colliding with enemies
-  - `handleCollisionAnimation()` handles the animation when players collide  
+  - `handleCollisionAnimation()` handles the animation when players collide
+- `PlayerStats` class
+  - `energy` tracks the player's current energy level and energy gain based on player speed and movement; triggers 'overcharge' state when energy reaches maximum
+  - `speed` double for the speed of player's movement
+  - `health` double for health of player
+  - `set()` methods for respective variables
+  - `get()` methods for respective variables
 
 ### Arena
 - `ArenaView` class
@@ -31,15 +37,10 @@ Using PixiJs (https://pixijs.com/8.x/guides) is a good choice for making the gam
   - `die()` manages collision logic on player hit
   - `updateEnemyMovement()` handle enemy movement 
 
-### Player & Energy Stats
-- `PlayerStats` class
-  - `energy` tracks the player's current energy level and energy gain based on player speed and movement; triggers 'overcharge' state when energy reaches maximum
-  - `speed` double for the speed of player's movement
-  - `health` double for health of player
-  - `set()` methods for respective variables
-  - - `get()` methods for respective variables
-- `EnergyVisual` class
-  - `renderEnergy()` updates the energy bar display based on the `EnergyManager`
+### Energy Stats
+- `EnergyManager` class
+  - `renderEnergy()` updates the energy bar display based on the current energy
+  - `updateEnergy()` calls the energy set methods in the playerstats to update energy accordingly.
 
 ### Game Flow
 1. `GameManager` class
