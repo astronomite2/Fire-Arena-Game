@@ -26,9 +26,9 @@ Using PixiJs (https://pixijs.com/8.x/guides) is a good choice for making the gam
 
 ### Enemies
 - `EnemyManager` class
+  - `enemyList` list of Enemy instances
   - `spawnEnemy()`spawns new enemies at random positions on the arena edge
-  - `handleCollisoin()` detects collisions between enemies and the player
-  - `handleCollisionAnimatino()` hanldes the enemy animatino when players collide with enemy
+enemy
 - `Enemy` class
   - Represents an individual enemy circle
   - `speed` double for the speed of enemy's movement
