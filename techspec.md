@@ -26,16 +26,16 @@ Using PixiJs (https://pixijs.com/8.x/guides) is a good choice for making the gam
 
 ### Enemies
 - `EnemyManager` class
-  - Spawns new enemies at random positions on the arena edge
-  - Moves enemies towards the player using simple AI
-  - Detects collisions between enemies and the player
+  - `spawnEnemy()`spawns new enemies at random positions on the arena edge
+  - `handleCollisoin()` detects collisions between enemies and the player
+  - `handleCollisionAnimatino()` hanldes the enemy animatino when players collide with enemy
 - `Enemy` class
   - Represents an individual enemy circle
   - `speed` double for the speed of enemy's movement
   - `health` double for health of enemy
   - `handleEnemyParticle()` handles enemy appearance and fiery particle effects
   - `die()` manages collision logic on player hit
-  - `updateEnemyMovement()` handle enemy movement 
+  - `updateEnemyMovement()` handle enemy movement; moves enemies towards the player using simple AI 
 
 ### Energy Stats
 - `EnergyManager` class
