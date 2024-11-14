@@ -6,7 +6,7 @@ Using PixiJs (https://pixijs.com/8.x/guides) is a good choice for making the gam
 - `PlayerController` class
   - Represents the player circle
   - `handlesMovement()` handles player movement based on WASD input
-  - `handlePhysics` calculates player speed and acceleration based on inertia; applies friction to slow down player when no keys are pressed; calculates player movement and momentum
+  - `handlePhysics` calculates player speed and acceleration based on inertia; applies friction to slow down player when no keys are pressed; calculates player movement and momentum (this may me doable by default using PixiJs) 
   - `updateEnergy()` manages player energy/health
   - `checkDeath()` detects collisions with enemies and the lava border
   - `handleCollision()` Handles energy depletion when colliding with enemies
@@ -37,6 +37,7 @@ Using PixiJs (https://pixijs.com/8.x/guides) is a good choice for making the gam
   - `speed` double for the speed of player's movement
   - `health` double for health of player
   - `set()` methods for respective variables
+  - - `get()` methods for respective variables
 - `EnergyVisual` class
   - `renderEnergy()` updates the energy bar display based on the `EnergyManager`
 
@@ -44,8 +45,8 @@ Using PixiJs (https://pixijs.com/8.x/guides) is a good choice for making the gam
 1. `GameManager` class
    - Orchestrates the overall game flow
    - Handles game start, countdown, and game over transitions
-   - `StartGame()` starts the countdown in the game; enable player and enemy movement; disable game over UI; reset the energy level
-   - `GameOver()` displays the "Game Over" message; Provides "Play Again" and "Exit" buttons; Renders the high score leaderboard
+   - `startGame()` starts the countdown in the game; enable player and enemy movement; disable game over UI; reset the energy level
+   - `gameOver()` displays the "Game Over" message; Provides "Play Again" and "Exit" buttons; Renders the high score leaderboard
 2. `LeaderboardManager` class
    - `appendScore()` stores player scores and updates the leaderboard and high scores in a database
    - `renderLeaderboard()` renders the leaderboard UI element 
