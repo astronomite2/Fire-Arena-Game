@@ -56,3 +56,6 @@ enemy
 - `AudioManager` class
   - `handleBGAudio()` plays background music and sound effects
   - `handlePlayerAudio()` handles audio for player movement, enemy interactions, and game events
+
+ ## Figma Class Diagram
+ https://www.figma.com/design/fw8RicLVMyG3xYliQEBvgm/John-Xu's-team-library?node-id=2313-2&t=Zsnpj4CWWac9jdXX-1
