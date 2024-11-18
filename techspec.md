@@ -54,5 +54,5 @@ enemy
 
 ### Audio
 - `AudioManager` class
-  - Plays background music and sound effects
-  - Handles audio for player movement, enemy interactions, and game events
+  - `handleBGAudio()` plays background music and sound effects
+  - `handlePlayerAudio()` handles audio for player movement, enemy interactions, and game events
