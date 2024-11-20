@@ -3,7 +3,7 @@ Using PixiJs (https://pixijs.com/8.x/guides) is a good choice for making the gam
 
 ## Game Architecture
 ### Player
-- `PlayerController` class
+- `PlayerController` class -> P0
   - Represents the player circle
   - `handlesMovement()` handles player movement based on WASD input
   - `handlePhysics` calculates player speed and acceleration based on inertia; applies friction to slow down player when no keys are pressed; calculates player movement and momentum (this may me doable by default using PixiJs) 
@@ -19,7 +19,7 @@ Using PixiJs (https://pixijs.com/8.x/guides) is a good choice for making the gam
   - `get()` methods for respective variables
 
 ### Arena
-- `ArenaView` class
+- `ArenaView` class -> P0
   - Renders the circular arena
   - Draws the lava border around the edge
   - Sets the size and proportions of the playable area
@@ -38,12 +38,12 @@ enemy
   - `updateEnemyMovement()` handle enemy movement; moves enemies towards the player using simple AI 
 
 ### Energy Stats
-- `EnergyManager` class
+- `EnergyManager` class -> P3
   - `renderEnergy()` updates the energy bar display based on the current energy
   - `updateEnergy()` calls the energy set methods in the playerstats to update energy accordingly.
 
 ### Game Flow
-1. `GameManager` class
+1. `GameManager` class -> P2
    - Orchestrates the overall game flow
    - Handles game start, countdown, and game over transitions
    - `startGame()` starts the countdown in the game; enable player and enemy movement; disable game over UI; reset the energy level
@@ -53,7 +53,7 @@ enemy
    - `renderLeaderboard()` renders the leaderboard UI element 
 
 ### Audio
-- `AudioManager` class
+- `AudioManager` class -> P4
   - `handleBGAudio()` plays background music and sound effects
   - `handlePlayerAudio()` handles audio for player movement, enemy interactions, and game events
 
